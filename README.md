@@ -1,10 +1,12 @@
 # Resolving entities via rewriteURI/rewriteSystem
 
+My ultimate goal is to user xinclude 1.1, which is supported by Calabash. 
+
 This project demonstrates a possible bug (or user-error on my part) with xmlcalabash 
 when using a catalog file to resolve the path to an entities file via rewriteURI/rewriteSystem
 rules in the catalog.
 
-The `build.sh` file assumes you have xmlcalabash-1.1.16-97 installed in the default 
+Note: The `build.sh` file assumes you have xmlcalabash-1.1.16-97 installed in the default 
 location on a mac `/Applications/xmlcalabash-1.1.16-97/xmlcalabash-1.1.16-97.jar` and that 
 you are sourcing `build.sh` from the directory in which it resides. 
 
