@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preface xml:id="xincluded-content" 
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    
+    <title>This works: xincluded content resolved via rewriteURI/rewriteSystem</title>
+    
+    <para>I'm from an xincluded file where the xincluded file's path was resolved via rewriteURI/rewriteSystem. 
+        I.e. <code>&lt;xi:include href="file://docshared/content/content.xml"/></code> was resolved via:
+        <programlisting>
+      &lt;rewriteURI uriStartString='file://docshared/' rewritePrefix='../'/&gt; 
+      &lt;rewriteSystem systemIdStartString='file://docshared/' rewritePrefix='../'/&gt;
+</programlisting>   
+    </para>
+    
+</preface>

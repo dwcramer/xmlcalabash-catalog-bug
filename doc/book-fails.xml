@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+
+<!ENTITY % entityset SYSTEM "urn:entityset">
+%entityset;
+
+<!ENTITY % myents SYSTEM "file://docshared/entities/rewrite-this.ent" >
+%myents;
+
+]>
+<book xmlns="http://docbook.org/ns/docbook"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xml:id="catalog-test" 
+      version="5.0">
+    <title>Catalog Test</title>
+    <xi:include href="file://docshared/content/content.xml"/>
+    <chapter>
+        <title>Plain old chapter</title>
+        <para> Testing some entities: <itemizedlist>
+                <listitem>
+                    <para>Entity resolved using a simple uri rewrite rule: &uri-test;</para>
+                </listitem>
+                <listitem>
+                    <para>Entity resolved using a rewriteUri rule: &rewritten-test;</para>
+                </listitem>
+            </itemizedlist></para>
+    </chapter>
+</book>

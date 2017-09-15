@@ -1,0 +1,5 @@
+<!ENTITY uri-test "I'm from an entity file resolved via a uri/system rule:
+<programlisting>
+    &lt;uri name='urn:entityset' uri='../entities/entities.ent'/&gt;
+    &lt;system systemId='urn:entityset' uri='../entities/entities.ent'/&gt;
+</programlisting>">

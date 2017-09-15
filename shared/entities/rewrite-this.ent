@@ -1,0 +1,6 @@
+<!ENTITY rewritten-test "I'm from an entity file resolved via rewriteURI/rewriteSystem: 
+<programlisting>
+      &lt;rewriteURI uriStartString='file://docshared/' rewritePrefix='../'/&gt; 
+      &lt;rewriteSystem systemIdStartString='file://docshared/' rewritePrefix='../'/&gt;
+</programlisting>
+      ">
