@@ -33,3 +33,14 @@ you are sourcing `build.sh` from the directory in which it resides.
    <!ENTITY % myents SYSTEM "file://docshared/entities/rewrite-this.ent" >
    %myents;
    ```
+   
+# Bonus bug in Oxygen 19.0
+
+To reproduce:
+
+1. Open Oxygen 19.0
+2. In Preferences, configure Oxygen to use `shared/catalog/catalog.xml` as one of its catalogs.
+3. Open `doc/oxygen-gets-confused.xml` in Oxygen
+4. Click Validate
+5. Note that Oxygen reports that "The entity "bar" was referenced, but not declared" 
+   but fails to notice that foo was also referenced but not declared in: `<chapter role="&foo;">`
