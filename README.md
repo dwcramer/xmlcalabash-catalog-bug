@@ -8,7 +8,10 @@ rules in the catalog.
 
 Note: The `build.sh` file assumes you have xmlcalabash-1.1.16-97 installed in the default 
 location on a mac `/Applications/xmlcalabash-1.1.16-97/xmlcalabash-1.1.16-97.jar` and that 
-you are sourcing `build.sh` from the directory in which it resides. 
+you are sourcing `build.sh` from the directory in which it resides. It also assumes you 
+have Oxygen installed so that the Apache resolver is available at 
+`/Applications/Oxygen XML Editor/lib/resolver.jar`. Please edit `build.sh` if those files live
+somewhere else for you. 
 
 * BOTH files are valid with all content resolved if I open them in Oxygen and configure 
   `shared/catalog/catalog.xml` as one of my catalogs. 
@@ -33,7 +36,9 @@ you are sourcing `build.sh` from the directory in which it resides.
    <!ENTITY % myents SYSTEM "file://docshared/entities/rewrite-this.ent" >
    %myents;
    ```
-   
+* When I run Calabash again in `build.sh` with the Apache resolver included from my Oxygen install directory 
+  and instructing Calabash to use that resolver, `build-fails.xml` does not fail.
+
 I've reported this here: https://github.com/ndw/xmlresolver/issues/11
    
 # Bonus bug in Oxygen 19.0
