@@ -47,4 +47,7 @@ To reproduce:
 5. Note that Oxygen reports that "The entity "bar" was referenced, but not declared" 
    but fails to notice that foo was also referenced but not declared in: `<chapter role="&foo;">`
    
+   ![Oxygen gets confused](https://raw.githubusercontent.com/dwcramer/xmlcalabash-catalog-bug/master/oxygen-gets-confused.png "Oxygen fails to notice that foo is undeclared")
+
+   
  I've reported this here: https://www.oxygenxml.com/forum/topic10653.html
