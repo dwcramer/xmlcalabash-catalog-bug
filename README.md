@@ -20,7 +20,7 @@ you are sourcing `build.sh` from the directory in which it resides.
       the rewriteURI/rewriteSystem rules in the catalog that maps `file://docshared` 
       to '../' (relative to the catalog).
       
-* `book-fails.xml` works fine in Oxygen, but fails with the error:
+* `book-fails.xml` loads fine in Oxygen, which is able to resolve all the entities via the catalog, but Calabash fails with the error:
 
    ```
    ERROR: It is a dynamic error if the resource referenced by a p:document element does not exist, cannot be accessed, or is not a well-formed XML document.
@@ -34,6 +34,8 @@ you are sourcing `build.sh` from the directory in which it resides.
    %myents;
    ```
    
+I've reported this here: https://github.com/ndw/xmlresolver/issues/11
+   
 # Bonus bug in Oxygen 19.0
 
 To reproduce:
@@ -44,3 +46,5 @@ To reproduce:
 4. Click Validate
 5. Note that Oxygen reports that "The entity "bar" was referenced, but not declared" 
    but fails to notice that foo was also referenced but not declared in: `<chapter role="&foo;">`
+   
+ I've reported this here: https://www.oxygenxml.com/forum/topic10653.html
