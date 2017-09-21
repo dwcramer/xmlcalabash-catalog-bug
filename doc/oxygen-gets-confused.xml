@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE book [
 
 <!ENTITY % entityset SYSTEM "urn:entityset">
@@ -13,10 +13,20 @@
       xml:id="catalog-test" 
       version="5.0">
     <title>Catalog Test</title>
-    <xi:include href="file://docshared/content/content.xml"/>
-    <chapter role="&foo;">
-        <title>Plain old chapter &bar;</title>
+    <xi:include href="file://docshared/content/content.xml"
+        xml:id="include-6c39f5b1-b417-44b8-adcf-eea98f0f900c"/>
+    <chapter xml:id="chapter-7c500e6b-7c0a-4f9d-8d47-3ab9bf7659c2">
+        <title>Plain old chapter</title>
         <para> Testing some entities: <itemizedlist>
+                <listitem>
+                    <para>Here's a weird quirk: Declaring and referencing the entity uri-test in a
+                        parameter entity file is fine. But if I declare and reference
+                            <emphasis>another</emphasis> parameter entity within that entity file,
+                        like I do in <filename>entities.ent</filename>, then Oxygen complains with
+                        the following message: "The reference to entity "level1" declared in the
+                        external subset of the DTD or in a parameter entity is not permitted in a
+                        standalone document." However, in this case Calabash has no problem with it. </para>
+                </listitem>
                 <listitem>
                     <para>Entity resolved using a simple uri rewrite rule: &uri-test;</para>
                 </listitem>

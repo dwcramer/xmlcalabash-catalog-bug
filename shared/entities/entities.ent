@@ -3,3 +3,5 @@
     &lt;uri name='urn:entityset' uri='../entities/entities.ent'/&gt;
     &lt;system systemId='urn:entityset' uri='../entities/entities.ent'/&gt;
 </programlisting>">
+
+<!ENTITY % another-level-of-parameter-entities SYSTEM "another-level-of-parameter-entities.ent">  %another-level-of-parameter-entities;
